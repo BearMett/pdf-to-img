@@ -1,9 +1,9 @@
 import { strict as invariant } from "node:assert";
-import Canvas from "canvas";
+import { Canvas, createCanvas, SKRSContext2D } from "@napi-rs/canvas";
 
 type Factory = {
-  canvas: Canvas.Canvas | null;
-  context: Canvas.CanvasRenderingContext2D | null;
+  canvas: Canvas | null;
+  context: SKRSContext2D | null;
 };
 
 type NonNullableFactory = {
@@ -18,7 +18,7 @@ export class NodeCanvasFactory {
     transparent: boolean
   ): NonNullableFactory {
     invariant(width > 0 && height > 0, "Invalid canvas size");
-    const canvas = Canvas.createCanvas(width, height);
+    const canvas = createCanvas(width, height);
     const context = canvas.getContext("2d", { alpha: transparent });
 
     // ensure that the canvas background is transparent

@@ -113,7 +113,7 @@ export async function pdf(
       ...options.renderParams,
     }).promise;
 
-    return canvas.toBuffer();
+    return canvas.toBuffer("image/png");
   }
 
   return {
