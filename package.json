@@ -1,6 +1,6 @@
 {
   "name": "pdf-to-img-napi-rs-canvas",
-  "version": "4.3.0",
+  "version": "4.3.1",
   "private": false,
   "author": "Youngmin Matthew Kim",
   "description": "📃📸 Converts PDFs to images in nodejs, but with @napi-rs/canvas",
