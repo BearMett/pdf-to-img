@@ -1,8 +1,9 @@
 {
-  "name": "pdf-to-img",
+  "name": "pdf-to-img-napi-rs-canvas",
   "version": "4.3.0",
-  "author": "Kyle Hensel",
-  "description": "📃📸 Converts PDFs to images in nodejs",
+  "private": false,
+  "author": "Youngmin Matthew Kim",
+  "description": "📃📸 Converts PDFs to images in nodejs, but with @napi-rs/canvas",
   "exports": "./dist/index.js",
   "types": "dist/index.d.ts",
   "type": "module",
@@ -18,7 +19,7 @@
     "vitest",
     "jest"
   ],
-  "repository": "https://github.com/k-yle/pdf-to-img",
+  "repository": "https://github.com/BearMett/pdf-to-img",
   "scripts": {
     "build": "tsc && rm -rf dist && mv temp/src dist && rm -rf temp",
     "lint": "eslint --ignore-path .gitignore .",
